@@ -5,11 +5,19 @@
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Ticketing.Api.runtimeconfig.json
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Ticketing.Api.dll
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Ticketing.Api.pdb
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/Ticketing.Api.csproj.AssemblyReference.cache
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/Ticketing.Api.GeneratedMSBuildEditorConfig.editorconfig
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/Ticketing.Api.AssemblyInfoInputs.cache
@@ -17,6 +25,7 @@
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/Ticketing.Api.csproj.CoreCompileInputs.cache
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/Ticketing.Api.MvcApplicationPartsAssemblyInfo.cs
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/Ticketing.Api.MvcApplicationPartsAssemblyInfo.cache
+/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/Ticketing.Api.sourcelink.json
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/staticwebassets.build.json
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/staticwebassets.development.json
 /Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/Debug/net8.0/staticwebassets/msbuild.Ticketing.Api.Microsoft.AspNetCore.StaticWebAssets.props
