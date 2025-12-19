@@ -73,6 +73,22 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(key),
         ClockSkew = TimeSpan.FromMinutes(2)
     };
+
+    options.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            Console.WriteLine("❌ JWT AUTH FAILED:");
+            Console.WriteLine(context.Exception.ToString());
+            return Task.CompletedTask;
+        },
+        OnTokenValidated = context =>
+        {
+            Console.WriteLine("✅ JWT TOKEN VALIDATED");
+            return Task.CompletedTask;
+        }
+    };
+
 });
 
 builder.Services.AddAuthorization();
