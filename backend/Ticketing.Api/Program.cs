@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using Ticketing.Api.Application.Services;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 using Ticketing.Api.Infrastructure.Data;
 using System.Text;
 
@@ -12,11 +13,32 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-var connectionString = builder.Configuration["DATABASE_URL"];
+var rawConnectionString = builder.Configuration["DATABASE_URL"];
+
+if (string.IsNullOrWhiteSpace(rawConnectionString))
+{
+    throw new Exception("DATABASE_URL is not set");
+}
+
+// Convert Render's postgres:// URL → Npgsql format
+var databaseUri = new Uri(rawConnectionString);
+
+var userInfo = databaseUri.UserInfo.Split(':', 2);
+
+var npgsqlConnectionString = new NpgsqlConnectionStringBuilder
+{
+    Host = databaseUri.Host,
+    Port = databaseUri.Port > 0 ? databaseUri.Port : 5432,
+    Username = userInfo[0],
+    Password = userInfo[1],
+    Database = databaseUri.AbsolutePath.TrimStart('/'),
+    SslMode = SslMode.Require,
+    TrustServerCertificate = true
+}.ToString();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseNpgsql(connectionString);
+    options.UseNpgsql(npgsqlConnectionString);
 });
 
 builder.Services.AddSwaggerGen(options =>
