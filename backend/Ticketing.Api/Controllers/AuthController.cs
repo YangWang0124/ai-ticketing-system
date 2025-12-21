@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Ticketing.Api.Application.Services;
 using Ticketing.Api.Domain.Entities;
 using Ticketing.Api.Infrastructure.Data;
+using Ticketing.Api.Application.DTOs;
+using Ticketing.Api.Domain.Constants;
 
 namespace Ticketing.Api.Controllers;
 
@@ -17,12 +19,26 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public IActionResult Register(User request)
+    public IActionResult Register(RegisterRequest request)
     {
         if (UserStore.Users.Any(u => u.Email == request.Email))
             return BadRequest("User already exists");
 
-        UserStore.Users.Add(request);
+        // Validate role
+        var role = request.Role;
+        if (role != Roles.Customer && role != Roles.Agent && role != Roles.Admin)
+        {
+            role = Roles.Customer;
+        }
+
+        var user = new User
+        {
+            Email = request.Email,
+            Password = request.Password, // hash later
+            Role = role
+        };
+
+        UserStore.Users.Add(user);
         return Ok("User registered");
     }
 
