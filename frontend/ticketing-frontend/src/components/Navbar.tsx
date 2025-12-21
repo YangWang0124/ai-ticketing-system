@@ -1,10 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { isLoggedIn, logout } from "../utils/auth";
+import { getUserRole } from "../utils/jwt";
 import "./Navbar.css";
 
 export default function Navbar() {
   const navigate = useNavigate();
   const loggedIn = isLoggedIn();
+  const role = getUserRole();
 
   const handleLogout = () => {
     logout();
@@ -37,11 +39,13 @@ export default function Navbar() {
               Dashboard
             </Link>
             <Link to="/tickets" className="nav-link">
-              Tickets
+              {role === "Customer" ? "My Tickets" : "All Tickets"}
             </Link>
-            <Link to="/create" className="nav-link">
-              Create Ticket
-            </Link>
+            {role === "Customer" && (
+              <Link to="/create" className="nav-link">
+                Create Ticket
+              </Link>
+            )}
             <button onClick={handleLogout} className="logout-btn">
               Logout
             </button>
