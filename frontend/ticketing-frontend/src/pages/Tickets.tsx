@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTickets } from "../api/ticketApi";
+
 import "./Tickets.css";
 
 interface Ticket {

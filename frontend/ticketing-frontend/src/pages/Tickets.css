@@ -1,22 +1,21 @@
 .tickets-page {
-    padding: 24px;
-  }
-  
-  .ticket-card {
-    background: #0f172a;
-    color: white;
-    padding: 16px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-  }
-  
-  .status {
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 4px;
-  }
-  
-  .status.open {
-    background: #2563eb;
-  }
-  
+  padding: 24px;
+}
+
+.ticket-card {
+  background: #0f172a;
+  color: white;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.status.open {
+  background: #2563eb;
+}

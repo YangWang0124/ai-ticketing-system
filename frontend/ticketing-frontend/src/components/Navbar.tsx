@@ -7,6 +7,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const loggedIn = isLoggedIn();
   const role = getUserRole();
+  console.log("ROLE FROM JWT:", role);
 
   const handleLogout = () => {
     logout();
