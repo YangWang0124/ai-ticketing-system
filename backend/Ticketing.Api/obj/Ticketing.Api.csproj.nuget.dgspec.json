@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj": {}
+    "/Users/yangwang/Desktop/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj": {}
   },
   "projects": {
-    "/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj": {
+    "/Users/yangwang/Desktop/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj",
+        "projectUniqueName": "/Users/yangwang/Desktop/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj",
         "projectName": "Ticketing.Api",
-        "projectPath": "/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj",
+        "projectPath": "/Users/yangwang/Desktop/ai-ticketing-system/backend/Ticketing.Api/Ticketing.Api.csproj",
         "packagesPath": "/Users/yangwang/.nuget/packages/",
-        "outputPath": "/Users/yangwang/ai-ticketing-system/backend/Ticketing.Api/obj/",
+        "outputPath": "/Users/yangwang/Desktop/ai-ticketing-system/backend/Ticketing.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yangwang/.nuget/NuGet/NuGet.Config"
@@ -51,6 +51,16 @@
               "target": "Package",
               "version": "[8.0.11, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.18, )"
+            },
             "Microsoft.IdentityModel.JsonWebTokens": {
               "target": "Package",
               "version": "[8.0.2, )"
@@ -58,6 +68,10 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
