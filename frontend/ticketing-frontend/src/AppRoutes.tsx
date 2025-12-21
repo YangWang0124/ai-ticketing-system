@@ -4,6 +4,8 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import { isLoggedIn } from "./utils/auth";
 import Navbar from "./components/Navbar";
+import Tickets from "./pages/Tickets";
+import CreateTicket from "./pages/CreateTicket";
 import type { ReactNode } from "react";
 
 function PrivateRoute({ children }: { children: ReactNode }) {
@@ -13,7 +15,7 @@ function PrivateRoute({ children }: { children: ReactNode }) {
 export default function AppRoutes() {
   return (
     <BrowserRouter>
-     <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -25,6 +27,23 @@ export default function AppRoutes() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/tickets"
+          element={
+            <PrivateRoute>
+              <Tickets />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/create"
+          element={
+            <PrivateRoute>
+              <CreateTicket />
+            </PrivateRoute>
+          }
+        />
+
         <Route path="/" element={<Navigate to="/dashboard" />} />
       </Routes>
     </BrowserRouter>

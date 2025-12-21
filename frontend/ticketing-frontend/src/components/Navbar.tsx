@@ -22,14 +22,26 @@ export default function Navbar() {
       <div className="navbar-right">
         {!loggedIn && (
           <>
-            <Link to="/login" className="nav-link">Login</Link>
-            <Link to="/register" className="nav-link">Register</Link>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+            <Link to="/register" className="nav-link">
+              Register
+            </Link>
           </>
         )}
 
         {loggedIn && (
           <>
-            <Link to="/dashboard" className="nav-link">Dashboard</Link>
+            <Link to="/dashboard" className="nav-link">
+              Dashboard
+            </Link>
+            <Link to="/tickets" className="nav-link">
+              Tickets
+            </Link>
+            <Link to="/create" className="nav-link">
+              Create Ticket
+            </Link>
             <button onClick={handleLogout} className="logout-btn">
               Logout
             </button>
