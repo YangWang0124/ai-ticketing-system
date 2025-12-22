@@ -8,4 +8,6 @@ public class Ticket
     public string Status { get; set; } = "Open"; // Open, InProgress, Resolved
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public string CreatedBy { get; set; } = "";
+    public List<TicketComment> Comments { get; set; } = new();
+
 }
