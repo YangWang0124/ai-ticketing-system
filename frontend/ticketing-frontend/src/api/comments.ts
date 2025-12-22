@@ -1,4 +1,4 @@
-export async function getComments(ticketId: number) {
+export async function getComments(ticketId: string) {
     const res = await fetch(
       `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}/comments`,
       {
@@ -10,7 +10,7 @@ export async function getComments(ticketId: number) {
     return res.json();
   }
   
-  export async function addComment(ticketId: number, content: string) {
+  export async function addComment(ticketId: string, content: string) {
     const res = await fetch(
       `${import.meta.env.VITE_API_URL}/api/tickets/${ticketId}/comments`,
       {

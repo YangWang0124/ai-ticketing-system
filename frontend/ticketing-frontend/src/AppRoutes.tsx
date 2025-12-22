@@ -6,6 +6,7 @@ import { isLoggedIn } from "./utils/auth";
 import Navbar from "./components/Navbar";
 import Tickets from "./pages/Tickets";
 import CreateTicket from "./pages/CreateTicket";
+import TicketDetails from "./pages/TicketDetails";
 import type { ReactNode } from "react";
 
 function PrivateRoute({ children }: { children: ReactNode }) {
@@ -32,6 +33,14 @@ export default function AppRoutes() {
           element={
             <PrivateRoute>
               <Tickets />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/tickets/:id"
+          element={
+            <PrivateRoute>
+              <TicketDetails />
             </PrivateRoute>
           }
         />

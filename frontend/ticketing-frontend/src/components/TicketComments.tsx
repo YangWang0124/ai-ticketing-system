@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getComments, addComment } from "../api/comments";
 
-export default function TicketComments({ ticketId }: { ticketId: number }) {
+export default function TicketComments({ ticketId }: { ticketId: string }) {
   const [comments, setComments] = useState<any[]>([]);
   const [text, setText] = useState("");
 
