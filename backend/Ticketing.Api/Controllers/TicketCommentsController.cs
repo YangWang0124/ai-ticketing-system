@@ -8,7 +8,7 @@ using Ticketing.Api.Infrastructure.Data;
 namespace Ticketing.Api.Controllers;
 
 [ApiController]
-[Route("api/tickets/{ticketId}/comments")]
+[Route("api/tickets/{ticketId:guid}/comments")]
 [Authorize]
 public class TicketCommentsController : ControllerBase
 {
@@ -20,7 +20,7 @@ public class TicketCommentsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetComments(int ticketId)
+    public async Task<IActionResult> GetComments(Guid ticketId)
     {
         var comments = await _db.TicketComments
             .Where(c => c.TicketId == ticketId)
@@ -31,7 +31,7 @@ public class TicketCommentsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddComment(int ticketId, [FromBody] string content)
+    public async Task<IActionResult> AddComment(Guid ticketId, [FromBody] string content)
     {
         var email = User.FindFirstValue(ClaimTypes.Email);
         var role = User.FindFirstValue(ClaimTypes.Role);

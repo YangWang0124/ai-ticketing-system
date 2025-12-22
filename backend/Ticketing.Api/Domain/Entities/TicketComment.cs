@@ -9,7 +9,7 @@ public class TicketComment
     public int Id { get; set; }
 
     [Required]
-    public int TicketId { get; set; }
+    public Guid TicketId { get; set; }
 
     [ForeignKey(nameof(TicketId))]
     public Ticket Ticket { get; set; } = null!;
